@@ -134,8 +134,6 @@ a{
 	}
 }
 
-
-
 .banner img{
 	margin-bottom: 60px;
 }
@@ -186,6 +184,11 @@ a{
 .product{
 	width: 66%;
 }
+@media (max-width:768px){
+	.product {
+		width: 100%;
+	}
+}
 .product ul{
 	display: flex;
 	justify-content: space-between;
@@ -197,10 +200,13 @@ a{
 	margin-bottom: 20px;
 	
 }
-
 @media (max-width:768px){
+	.product li{
+		width: auto;
+	}
+}
+@media (max-width:576px){
 	.product{
-		width: 100%;
 		margin: 0 30px;
 	}
 	.product ul{
@@ -208,6 +214,7 @@ a{
 		align-items: center;
 	}
 	.product li{
+		width: 100%;
 		margin-bottom: 30px;
 	}
 }
@@ -325,7 +332,7 @@ a{
 	border: 1px solid #3F5D45;
 }
 
-/* Footer */
+/* Email */
 .email{
     background: #3F5D45;
 }
