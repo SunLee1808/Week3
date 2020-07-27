@@ -112,7 +112,7 @@ a{
 	display: flex;
 	align-items: center;
 }
-.header li {
+.header li{
 	display: block;
 	padding: 0 30px;
 }
@@ -184,11 +184,6 @@ a{
 .product{
 	width: 66%;
 }
-@media (max-width:768px){
-	.product {
-		width: 100%;
-	}
-}
 .product ul{
 	display: flex;
 	justify-content: space-between;
@@ -201,6 +196,9 @@ a{
 	
 }
 @media (max-width:768px){
+	.product {
+		width: 100%;
+	}
 	.product li{
 		width: auto;
 	}
@@ -229,12 +227,7 @@ a{
 	left: 20px;
 	padding: 10px;
 }
-@media (max-width:576px){
-	.product .sale{
-		font-size: 12px;
-		padding: 6px;
-	}
-}
+
 .product .favorite{
 	position: absolute;
 	top: 19px;
@@ -275,6 +268,10 @@ a{
 	}
 }
 @media (max-width:576px){
+	.product .sale{
+		font-size: 12px;
+		padding: 6px;
+	}
 	.product .name_price{
 		font-size: 16px;
 	}
@@ -282,7 +279,6 @@ a{
 		font-size: 20px
 	}
 }
-
 .product a:hover{
 	background: #3F5D45;
 	color: #EAF0ED;
@@ -342,12 +338,6 @@ a{
     display: flex;
     justify-content: space-between;
 }
-@media (max-width:768px) {
-	.subscribe {
-		flex-direction: column;
-		align-items: center;
-	}
-}
 .logo-light{
     display: flex;
 	align-items: center;
@@ -357,6 +347,10 @@ a{
     font-size: 24px;
 }
 @media (max-width:768px) {
+	.subscribe {
+		flex-direction: column;
+		align-items: center;
+	}
 	.logo-light{
 		margin-top: 30px;
 	}
@@ -414,6 +408,12 @@ input:focus{
 		padding: 0 20px;
 	}
 }
+@media (max-width:576px) {
+	.contact {
+        flex-direction: column;
+        padding: 0 30px;
+	}
+}
 .left .logo-sm{
 	width: 170px;
     margin-bottom: 120px;
@@ -429,20 +429,6 @@ input:focus{
 }
 .left .icon img{
     padding-right: 8px;
-}
-
-@media (max-width:576px) {
-	.contact {
-        flex-direction: column;
-        padding: 0 30px;
-	}
-	.left .logo-sm{
-		margin-bottom: 40px;
-	}
-	.left img{
-		padding-bottom: 20px;
-	}
-	
 }
 .right{
     display: flex;
@@ -467,6 +453,12 @@ input:focus{
 	}
 }
 @media (max-width:576px) {
+	.left .logo-sm{
+		margin-bottom: 40px;
+	}
+	.left img{
+		padding-bottom: 20px;
+	}
 	.right{
 		align-items: flex-start;
 	}
