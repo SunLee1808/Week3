@@ -58,11 +58,7 @@ body{
 	max-width: 940px;
 	margin: 0 auto;
 }
-@media (max-width:992px){
-	.container{
-		max-width:85%;
-	}
-}
+
 img{
     display: block;
     max-width: 100%;
@@ -78,9 +74,14 @@ a{
 	justify-content: space-between;
 	margin: 30px 0;
 }
+@media (max-width:992px){
+	.header{
+		padding: 0 20px;
+	}
+}
 @media (max-width:768px){
 	.header{
-		justify-content: space-around;
+		justify-content: space-between;
 	}
 }
 .drop-down-list{
@@ -112,11 +113,11 @@ a{
 	display: flex;
 	align-items: center;
 }
-.header li{
+.header li a{
 	display: block;
 	padding: 0 30px;
 }
-.header li:nth-child(4){
+.header li:last-child{
 	padding-right: 0;
 	margin-left: 20px;
 }
@@ -124,12 +125,11 @@ a{
 	opacity: 0.5;
 }
 @media (max-width:768px){
-	.header li{
+	.header li:nth-child(1), .header li:nth-child(2), .header li:nth-child(3){
 		display: none;
-		padding: 0;
 	}
-	.header li:nth-child(4){
-		display: block;
+	.header li a{
+		padding: 0;
 		margin: 0;
 	}
 }
@@ -152,6 +152,7 @@ a{
 .menu{
 	width: 30%;
 	font-size: 24px;
+	line-height: 33px;
 	text-align: center;
 }
 @media (max-width:768px){
@@ -193,27 +194,28 @@ a{
 	width: 48%;
 	position: relative;
 	margin-bottom: 20px;
-	
+}
+.product li img{
+	width: 100%;
 }
 @media (max-width:768px){
 	.product {
 		width: 100%;
+		padding: 0 20px;
 	}
 	.product li{
-		width: auto;
+		width: 46%;
+		margin-bottom: 30px;
 	}
 }
 @media (max-width:576px){
-	.product{
-		margin: 0 30px;
-	}
 	.product ul{
+		width: 100%;
 		flex-direction: column;
 		align-items: center;
 	}
 	.product li{
-		width: 100%;
-		margin-bottom: 30px;
+		width: 85%;
 	}
 }
 
@@ -229,6 +231,9 @@ a{
 }
 
 .product .favorite{
+	background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true") no-repeat;
+	width: 20px;
+    height: 20px;
 	position: absolute;
 	top: 19px;
 	right: 22px;
@@ -259,26 +264,7 @@ a{
 	text-align: center;
 	padding: 16px 0;
 }
-@media (max-width:768px){
-	.product .name_price{
-		font-size: 18px;
-	}
-	.product .shopping{
-		font-size: 22px
-	}
-}
-@media (max-width:576px){
-	.product .sale{
-		font-size: 12px;
-		padding: 6px;
-	}
-	.product .name_price{
-		font-size: 16px;
-	}
-	.product .shopping{
-		font-size: 20px
-	}
-}
+
 .product a:hover{
 	background: #3F5D45;
 	color: #EAF0ED;
@@ -344,7 +330,8 @@ a{
 }
 .logo-light p{
     color: #EAF0ED;
-    font-size: 24px;
+	font-size: 24px;
+	line-height: 33px;
 }
 @media (max-width:768px) {
 	.subscribe {
@@ -414,28 +401,28 @@ input:focus{
         padding: 0 30px;
 	}
 }
-.left .logo-sm{
+.method .logo-sm{
 	width: 170px;
     margin-bottom: 120px;
 }
-.left .info{
+.method .info{
     font-weight: normal;
     line-height: 24px;
     margin-bottom: 30px;
 }
-.left .icon{
+.method .socialIcon{
     width: 32px;
     display: flex;
 }
-.left .icon img{
+.method .socialIcon img{
     padding-right: 8px;
 }
-.right{
+.phrase{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.right .slogan{
+.phrase .slogan{
     font-size: 24px;
     writing-mode: vertical-rl;
     letter-spacing: 7px;
@@ -446,23 +433,25 @@ input:focus{
     font-weight: lighter;
     letter-spacing: 0;
 }
-
+.phrase .copyright{
+	line-height: 16px;
+}
 @media (max-width:768px) {
-	.right .copyright{
+	.phrase .copyright{
 		font-size: 14px;
 	}
 }
 @media (max-width:576px) {
-	.left .logo-sm{
+	.method .logo-sm{
 		margin-bottom: 40px;
 	}
-	.left img{
+	.method img{
 		padding-bottom: 20px;
 	}
-	.right{
+	.phrase{
 		align-items: flex-start;
 	}
-	.right .slogan {
+	.phrase .slogan {
 		display: none;
 	}
 }
