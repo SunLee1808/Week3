@@ -275,10 +275,6 @@ a{
 	justify-content: flex-end;
 	margin-bottom: 60px;
 }
-.button ul{
-	display: flex;
-}
-
 @media (max-width:768px){
 	.button{
 		justify-content: center;
